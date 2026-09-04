@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky && husky install"
   },
   "dependencies": {
     "next": "16.3.4",
@@ -26,7 +27,8 @@
     "lint-staged": "^17.4.1",
     "prettier": "^3.9.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "husky": "^8.0.0"
   },
   "packageManager": "yarn@1.22.22"
 }

@@ -1,15 +1,21 @@
-'use client';
+import { Button } from './Button';
 
-export default function Home() {
+async function getVehicles() {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
+  return ['RS5', 'M2', 'M3', 'RS6'];
+}
+
+export default async function Home() {
   console.log(
     'Client components are rendered on the server and client, this console is displayed in both the terminal and the browser',
   );
+
+  const vehicles = await getVehicles();
   return (
-    <button
-      className="border border-white rounded-2xl w-200 bg-blue-700 hover:bg-blue-400"
-      onClick={() => alert('Click')}
-    >
-      Click
-    </button>
+    <>
+      {vehicles}
+      <Button />
+    </>
   );
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Checkout } from './Checkout';
 import { ListVehicles } from './ListVehicles';
 
@@ -8,6 +9,8 @@ export default async function Home() {
   return (
     <>
       <Checkout listVehicles={<ListVehicles />} />
+      <Link href="/auth/signup">Ir para Signup</Link>
+      <Link href="/auth/signin">Ir para Signin</Link>
     </>
   );
 }

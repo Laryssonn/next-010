@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 function getMakes() {
   new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -12,12 +14,14 @@ export default async function Makes() {
       <h1 className="mb-4 font-extrabold text-4xl">Marcas</h1>
       <div className="grid grid-cols-5 gap-4">
         {makes.map((make) => (
-          <div
-            key={make}
-            className="bg-zinc-900 border-zinc-700 border rounded-lg grid place-items-center h-80"
-          >
-            {make}
-          </div>
+          <Link href={`/makes/${make}`} key={make}>
+            <div
+              key={make}
+              className="bg-zinc-900 border-zinc-700 border rounded-lg grid place-items-center h-80"
+            >
+              {make}
+            </div>
+          </Link>
         ))}
       </div>
     </div>

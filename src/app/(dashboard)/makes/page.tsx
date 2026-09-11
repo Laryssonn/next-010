@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 function getMakes() {
@@ -5,6 +6,10 @@ function getMakes() {
 
   return ['Audi', 'BMW', 'BYD', 'Honda', 'Subaru'];
 }
+
+export const metadata: Metadata = {
+  title: 'Marcas | LN Cars 🚗',
+};
 
 export default async function Makes() {
   const makes = await getMakes();

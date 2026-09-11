@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-function getMakes() {
-  new Promise((resolve) => setTimeout(resolve, 1000));
+async function getMakes() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return ['Audi', 'BMW', 'BYD', 'Honda', 'Subaru'];
 }
